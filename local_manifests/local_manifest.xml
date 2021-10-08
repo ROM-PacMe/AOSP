@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+<remote name="andy" fetch="https://github.com/AndyCGYan/" />
+<remote name="rami" fetch="https://github.com/Ramisky/" />
+
+<!--
+     (device boot) means those contain device-specific fixes which are required to boot
+     (boot) means it is required to boot
+-->
+
+<!-- (device boot) Needed for AOSP Android 12 Custom ROM -->
+<project path="device/xiaomi/apollon" name="device_xiaomi_apollon" remote="rami" revision="fluid-11" />
+<project path="device/xiaomi/sm8250-common" name="device_xiaomi_sm8250-common" remote="rami" revision="fluid-11" />
+<project path="kernel/xiaomi/sm8250" name="kernel_xiaomi_sm8250" remote="rami" revision="dazai" />
+<project path="vendor/xiaomi/apollon" name="vendor_xiaomi_apollon" remote="rami" revision="fliud-11" />
+<project path="vendor/xiaomi/sm8250-common" name="vendor_xiaomi_sm8250-common" remote="rami" revision="fliud-11" />
+<project path="hardware/xiaomi" name="android_hardware_xiaomi" remote="rami" revision="lineage-18.1" />
+
+<!-- (device boot) Needed for AOSP Android 12 Custom ROM -->
+<remove-project name="platform/frameworks/base" />
+<project path="frameworks/base" name="platform_frameworks_base" remote="andy" revision="android-12.0.0_r2" />
+
+</manifest>
